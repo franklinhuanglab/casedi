@@ -19,25 +19,7 @@ pip install git+https://https://github.com/maggietsui/CASEDI.git
 
 ## Usage
 
-Here is a minimal example:
-
-```python
-import seaborn as sns
-from statannot import add_stat_annotation
-
-df = sns.load_dataset("tips")
-x = "day"
-y = "total_bill"
-order = ['Sun', 'Thur', 'Fri', 'Sat']
-ax = sns.boxplot(data=df, x=x, y=y, order=order)
-test_results = add_stat_annotation(ax, data=df, x=x, y=y, order=order,
-                                   box_pairs=[("Thur", "Fri"), ("Thur", "Sat"), ("Fri", "Sun")],
-                                   test='Mann-Whitney', text_format='star',
-                                   loc='outside', verbose=2)
-test_results
-```
-
-More examples are available in the jupyter notebook `example/example.ipynb`.
+Examples are available in the jupyter notebook `examples/examples.ipynb`.
 
 ## Requirements
 
@@ -46,3 +28,4 @@ More examples are available in the jupyter notebook `example/example.ipynb`.
 + scikit-survival
 + scipy >= 1.9.1
 + statsmodels >= 0.13.2
++ matplotlib >= 3.4.2
