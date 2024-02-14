@@ -1,9 +1,9 @@
 # Cancer ASE driver identification (CASEDI)
 
-<img src="casedi.png" width=80% height=80%>
+<img src="casedi.png" width=70% height=70%>
 
 CASEDI is an analysis framework that uses tumor allele-specific expression (ASE) data to prioritize cancer driver genes. CASEDI includes functions to identify genes enriched for ASE between datasets, conduct ASE-stratified survival analysis, and identify genes showing ASE outlier expression.
-
+s
 ## Installation
 
 The latest stable release can be installed from PyPI:
