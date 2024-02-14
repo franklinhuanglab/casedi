@@ -38,8 +38,9 @@ def ase_compare_groups(ase_table, group1_ids, group2_ids,testable_fraction=0.10)
     mat1 = ase_table[ase_table['sampleID'].isin(group1_ids)]
     mat2 = ase_table[ase_table['sampleID'].isin(group2_ids)]
     
-    if (len(mat1)!=len(group1_ids)) | (len(mat2)!=len(group2_ids)):
+    if (len(set(mat1['sampleID']))!=len(group1_ids)) | (len(set(mat2['sampleID']))!=len(group2_ids)):
         raise Exception("Some group1 or group2 ids were not found in ASE table")
+
         
     # Get minimum # of samples testable in each group
     mat1_min = len(set(mat1['sampleID']))*testable_fraction
