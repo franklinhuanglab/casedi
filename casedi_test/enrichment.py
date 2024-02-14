@@ -56,10 +56,10 @@ def ase_compare_groups(ase_table, group1_ids, group2_ids,testable_fraction=0.10)
     mat1_sig = mat1[(mat1['ase'] ==1)]
     mat2_sig = mat2[(mat2['ase'] ==1)]
 
-    print("mat1 genes showing ASE: ",len(set(mat1_sig['gene'])))
-    print("mat1 total genes: ",len(set(mat1['gene'])))
-    print("mat2 genes showing ASE: ",len(set(mat2_sig['gene'])))
-    print("mat2 total genes: ",len(set(mat2['gene'])))
+    print("Group1 genes showing ASE: ",len(set(mat1_sig['gene'])))
+    print("Group1 total genes: ",len(set(mat1['gene'])))
+    print("Group2 genes showing ASE: ",len(set(mat2_sig['gene'])))
+    print("Group2 total genes: ",len(set(mat2['gene'])))
     
     # common genes between group 1 and 2 that are testable in  
     # testable_fraction for each group. 
