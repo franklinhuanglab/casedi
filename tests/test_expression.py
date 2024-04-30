@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import numpy as np
 
-from casedi_test.expression import ase_compare_expression
+from casedi.expression import ase_compare_expression
 
 example_ase_table = pd.DataFrame({'gene': np.repeat('A',20),
                                  'ase': np.concatenate([np.repeat(0,10),np.repeat(1,10)]),
