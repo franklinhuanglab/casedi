@@ -79,10 +79,10 @@ def ase_compare_groups(ase_table, group1_ids, group2_ids,testable_fraction=0.10)
     # group1     8        2
     # group2     1        5
     
-    total_mat1 = mat1['gene'].value_counts().loc[genes_to_test]
-    total_mat2 = mat2['gene'].value_counts().loc[genes_to_test]
-    sig_mat1 = mat1_sig['gene'].value_counts().loc[common_ASE_sig_mat1]
-    sig_mat2 = mat2_sig['gene'].value_counts().loc[common_ASE_sig_mat2]
+    total_mat1 = mat1['gene'].value_counts().loc[list(genes_to_test)]
+    total_mat2 = mat2['gene'].value_counts().loc[list(genes_to_test)]
+    sig_mat1 = mat1_sig['gene'].value_counts().loc[list(common_ASE_sig_mat1)]
+    sig_mat2 = mat2_sig['gene'].value_counts().loc[list(common_ASE_sig_mat2)]
     fisher_table = pd.concat([sig_mat1,total_mat1,sig_mat2,total_mat2],join= 'outer',axis=1)
     fisher_table.columns = ['group1_ASE','group1_total','group2_ASE', 'group2_total']
     fisher_table.fillna(0, inplace=True)
