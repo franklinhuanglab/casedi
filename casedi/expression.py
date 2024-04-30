@@ -1,7 +1,7 @@
 import scipy
 import pandas as pd
 
-from casedi_test.util import make_matrix
+from casedi.util import make_matrix
 
 def ase_compare_expression(gene, ase_table, expression_table, alternative='two-sided'):
     """Wrapper function for scipy.stats.mannwhitneyu to test expression

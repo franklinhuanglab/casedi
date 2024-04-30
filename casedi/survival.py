@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-from casedi_test.util import make_matrix
+from casedi.util import make_matrix
 
 def ase_compare_survival(gene, ase_table, survival_table,  return_stats=False,expression_table=None,plot=False,stratify_expression=None):
     """Wrapper function for sksurv kaplan_meier_estimator and 
