@@ -9,7 +9,7 @@ CASEDI is an analysis framework that uses tumor allele-specific expression (ASE)
 The latest stable release can be installed from PyPI:
 
 ```python
-pip install --index-url https://test.pypi.org/simple/ --no-deps casedi-test
+pip install casedi
 ```
 You may instead want to use the development version from Github:
 
